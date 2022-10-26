@@ -10,7 +10,7 @@ function displaybooks() {
   book.innerHTML = '';
   for (let i = 0; i < books.length; i += 1) {
     const booklist = document.createElement('li');
-    booklist.innerHTML = `<span class="title">${books[i].title}</span> <br> ${books[i].author} <br>`
+    booklist.innerHTML = `<span class="title">${books[i].title}</span> <br> ${books[i].author} <br>`;
     const btn = document.createElement('button');
     const hrLine = document.createElement('hr');
     btn.textContent = 'Remove';
@@ -22,7 +22,7 @@ function displaybooks() {
     };
     book.append(booklist);
   }
-};
+}
 
 function addBook(title, author) {
   books.push({ title, author });
