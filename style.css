@@ -39,14 +39,19 @@ form {
   padding: 0.1rem;
 }
 
-.list {
-  border: 3px solid black;
-  width: 100%;
-  min-height: 3em;
-  height: 100%;
-  margin-bottom: 2em;
+li {
+  display: flex;
+  margin-block: 0.1em;
+  justify-content: space-between;
+  margin-inline: 12.3em;
+  font-weight: 700;
 }
 
-button {
-  align-self: flex-end;
+hr {
+  width: 80%;
+  margin: auto;
+}
+
+h5 {
+  text-align: center;
 }
