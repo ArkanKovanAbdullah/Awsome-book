@@ -2,41 +2,35 @@ const listContainer = document.getElementById('list');
 const booksContainer = document.createElement('ul');
 booksContainer.classList.add('books-list');
 
-class Collect {
-  constructor() {
-    this.books = [];
-  }
+const books = [];
 
-  removeBook(index) {
-    this.books.splice(index, 1);
-    window.localStorage.setItem('books', JSON.stringify(this.books));
-  }
+function removeBook(index) {
+  books.splice(index, 1);
+  window.localStorage.setItem('books', JSON.stringify(books));
+}
 
-  displayBooks() {
-    booksContainer.innerHTML = '';
-    for (let i = 0; i < this.books.length; i += 1) {
-      const book = document.createElement('li');
-      book.innerHTML = `<span class="title"> "${this.books[i].title}" by ${this.books[i].author}</span>`;
-      const btn = document.createElement('button');
-      btn.className = 'list-btn';
-      btn.textContent = 'Remove';
-      book.append(btn);
-      btn.onclick = () => {
-        this.removeBook(i);
-        this.displayBooks();
-      };
-      booksContainer.append(book);
-      listContainer.append(booksContainer);
-    }
-  }
-
-  addBook(title, author) {
-    this.books.push({ title, author });
-    this.displayBooks();
+function displayBooks() {
+  booksContainer.innerHTML = '';
+  for (let i = 0; i < this.books.length; i += 1) {
+    const book = document.createElement('li');
+    book.innerHTML = `<span class="title"> "${books[i].title}" by ${books[i].author}</span>`;
+    const btn = document.createElement('button');
+    btn.className = 'list-btn';
+    btn.textContent = 'Remove';
+    book.append(btn);
+    btn.onclick = () => {
+      removeBook(i);
+      displayBooks();
+    };
+    booksContainer.append(book);
+    listContainer.append(booksContainer);
   }
 }
 
-const books = new Collect();
+function addBook(title, author) {
+  books.push({ title, author });
+  displayBooks();
+}
 
 document.forms[0].onsubmit = (event) => {
   event.preventDefault();
@@ -51,7 +45,7 @@ document.forms[0].onsubmit = (event) => {
     section.insertAdjacentElement('afterend', message);
     setTimeout(() => { message.remove(); }, 3000);
   } else {
-    books.addBook(title, author);
+    addBook(title, author);
     thisForm[0].value = '';
     thisForm[1].value = '';
   }
