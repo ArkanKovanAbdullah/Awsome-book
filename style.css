@@ -5,8 +5,11 @@
 }
 
 .books-list {
-  list-style: none;
-  width: 50%;
+  margin: auto;
+  width: 40%;
+  border: 3px solid black;
+  display: flex;
+  flex-direction: column;
 }
 
 .margin-right-left-auto {
@@ -31,4 +34,29 @@ form {
   width: 50%;
   align-items: center;
   justify-content: center;
+}
+
+.list-btn {
+  justify-content: center;
+  border: 2px solid;
+  padding: 0.1rem;
+  box-shadow: 2px 2px 2px;
+}
+
+li {
+  padding: 5px 5px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+li:nth-child(odd) {
+  background-color: #ddd;
+}
+
+li:nth-child(even) {
+  background-color: white;
 }
