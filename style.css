@@ -79,3 +79,9 @@ form {
   list-style: none;
   display: flex;
 }
+
+#time {
+  display: flex;
+  justify-content: end;
+  margin-right: 4rem;
+}
