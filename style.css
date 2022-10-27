@@ -1,15 +1,7 @@
-* {
+*{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-
-.books-list {
-  margin: auto;
-  width: 40%;
-  border: 3px solid black;
-  display: flex;
-  flex-direction: column;
 }
 
 .margin-right-left-auto {
@@ -18,6 +10,25 @@
 
 .text-center {
   text-align: center;
+}
+
+.js-li {
+  border: 2px solid;
+  padding: 5px 5px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.js-li:nth-child(odd) {
+  background-color: #ddd;
+}
+
+.js-li:nth-child(even) {
+  background-color: white;
 }
 
 .inputs {
@@ -42,24 +53,6 @@ form {
   padding: 0.1rem;
   box-shadow: 2px 2px 2px;
 }
-
-/*li {
-  padding: 5px 5px;
-  margin: auto;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
-}
-
-li:nth-child(odd) {
-  background-color: #ddd;
-}
-
-li:nth-child(even) {
-  background-color: white;
-}*/
 
 #contact {
   display: none;

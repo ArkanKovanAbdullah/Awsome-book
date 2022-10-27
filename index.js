@@ -22,6 +22,7 @@ function displayBooks() {
   booksContainer.innerHTML = '';
   for (let i = 0; i < books.length; i += 1) {
     const book = document.createElement('li');
+    book.className = 'js-li';
     book.innerHTML = `<span class="title"> "${books[i].title}" by ${books[i].author}</span>`;
     const btn = document.createElement('button');
     btn.className = 'list-btn';
