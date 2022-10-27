@@ -5,7 +5,7 @@ const lists = document.getElementById('container');
 const container = document.getElementById('form-section');
 const contact = document.getElementById('contact');
 
-const books = [];
+let books = [];
 
 function removeBook(index) {
   books.splice(index, 1);
@@ -71,6 +71,14 @@ document.forms[0].onsubmit = (event) => {
     thisForm[1].value = '';
   }
   window.localStorage.setItem('books', JSON.stringify(books));
+};
+
+window.onload = () => {
+  if (localStorage.getItem('books')) {
+    books = JSON.parse(localStorage.getItem('books'));
+  }
+
+  displayBooks();
 };
 
 function refreshTime() {

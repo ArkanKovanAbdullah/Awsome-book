@@ -63,8 +63,7 @@ li:nth-child(even) {
 
 #contact {
   display: none;
-  align-items: center;
-
+  text-align: center;
 }
 
 .form-section {
@@ -73,9 +72,10 @@ li:nth-child(even) {
 
 .navbar {
   display: flex;
+  margin: auto;
   margin-block: 1em;
   border: 3px solid black;
-  min-width: 95%;
+  width: 90%;
   align-items: center;
   justify-content: space-between;
   align-self: center;
