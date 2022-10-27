@@ -42,7 +42,7 @@ To get a local copy up and running follow these simple example steps.
 
 Clone the repository
 ```
-git clone https://github.com/osamaashraf6/portfolio.git
+git clone https://github.com/ArkanKovanAbdullah/Awsome-book.git
 ```
 Navigate to the folder
 ```
