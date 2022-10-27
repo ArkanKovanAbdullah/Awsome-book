@@ -1,7 +1,6 @@
 const listContainer = document.getElementById('list');
-let booksContainer = document.createElement('ul');
+const booksContainer = document.createElement('ul');
 booksContainer.classList.add('books-list');
-
 
 class Collect {
   constructor() {
