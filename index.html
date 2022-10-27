@@ -8,9 +8,20 @@
   <title>Awesome Book</title>
 </head>
 <body>
+  <nav class="navbar" id="nav-bar">
+   <h3>Awesome Books</h3>
+   <ul class="nav-li" id="nav-li">
+    <li class="lis"><a id="nav-list">List</a></li> 
+    <li class="lis"><a id="nav-add">Add</a></li>
+    <li class="lis"><a id="nav-contact">Contact</a></li>
+   </ul>
+  </nav>
+  <div id="container">
  <h1 class="text-center">Awesome Book</h1>
     <section id="list">
     </section>
+    </div>
+
     <section id="form-section">
       <h5 class="text-center">Add a new book</h5>
       <form class="margin-right-left-auto">
@@ -18,6 +29,15 @@
         <input class="inputs" name="author" type="text" placeholder="Author" />
         <button class="inputs" type="submit">Add</button>
       </form>
+    </section>
+    <section id="contact">
+     <h2>Contact Information</h2>
+     <p>Do you have any questions or you just want to say "Hello"</p>
+     <ul class="hello">
+      <li>Our e-mail: mail@mail.com</li>
+      <li>Our phone number:0043586534422</li>
+      <li>Our address: 22,84503 City, Country</li>
+     </ul>
     </section>
     <script src="index.js"></script>
 </body>

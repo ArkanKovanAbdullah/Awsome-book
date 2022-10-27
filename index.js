@@ -1,6 +1,9 @@
 const listContainer = document.getElementById('list');
 const booksContainer = document.createElement('ul');
 booksContainer.classList.add('books-list');
+const lists = document.getElementById('container');
+const container = document.getElementById('form-section');
+const contact = document.getElementById('contact');
 
 const books = [];
 
@@ -9,9 +12,15 @@ function removeBook(index) {
   window.localStorage.setItem('books', JSON.stringify(books));
 }
 
+document.getElementById('nav-list').addEventListener('click', () => {
+  lists.style.display = 'flex';
+  container.style.display = 'none';
+  contact.style.display = 'none';
+});
+
 function displayBooks() {
   booksContainer.innerHTML = '';
-  for (let i = 0; i < this.books.length; i += 1) {
+  for (let i = 0; i < books.length; i += 1) {
     const book = document.createElement('li');
     book.innerHTML = `<span class="title"> "${books[i].title}" by ${books[i].author}</span>`;
     const btn = document.createElement('button');
@@ -27,10 +36,22 @@ function displayBooks() {
   }
 }
 
+document.getElementById('nav-add').addEventListener('click', () => {
+  container.style.display = 'block';
+  lists.style.display = 'none';
+  contact.style.display = 'none';
+});
+
 function addBook(title, author) {
   books.push({ title, author });
   displayBooks();
 }
+
+document.getElementById('nav-contact').addEventListener('click', () => {
+  container.style.display = 'none';
+  lists.style.display = 'none';
+  contact.style.display = 'block';
+});
 
 document.forms[0].onsubmit = (event) => {
   event.preventDefault();
@@ -51,3 +72,11 @@ document.forms[0].onsubmit = (event) => {
   }
   window.localStorage.setItem('books', JSON.stringify(books));
 };
+
+function refreshTime() {
+  const timeDisplay = document.getElementById('time');
+  const dateString = new Date().toLocaleString();
+  const formattedString = dateString.replace(', ', ' - ');
+  timeDisplay.textContent = formattedString;
+}
+setInterval(refreshTime, 1);

@@ -43,7 +43,7 @@ form {
   box-shadow: 2px 2px 2px;
 }
 
-li {
+/*li {
   padding: 5px 5px;
   margin: auto;
   display: flex;
@@ -59,4 +59,30 @@ li:nth-child(odd) {
 
 li:nth-child(even) {
   background-color: white;
+}*/
+
+#contact {
+  display: none;
+  align-items: center;
+
+}
+
+.form-section {
+  display: none;
+}
+
+.navbar {
+  display: flex;
+  margin-block: 1em;
+  border: 3px solid black;
+  min-width: 95%;
+  align-items: center;
+  justify-content: space-between;
+  align-self: center;
+  height: 2em;
+}
+
+.nav-li {
+  list-style: none;
+  display: flex;
 }
