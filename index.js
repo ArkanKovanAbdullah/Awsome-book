@@ -4,7 +4,7 @@ booksContainer.classList.add('books-list');
 
 class Collect {
   constructor() {
-    this.books = JSON.parse(localStorage.getItem('storedBooks')) || []; 
+    this.books = JSON.parse(localStorage.getItem('storedBooks')) || [];
   }
 
   removeBook(index) {
@@ -66,22 +66,21 @@ const listBtn = document.getElementById('list-btn');
 const addNewBtn = document.getElementById('add-new-btn');
 const contact = document.getElementById('contact');
 const contactBtn = document.getElementById('contact-btn');
-const addBookForm = document.querySelector('books-form');
 
-listBtn.addEventListener('click', () =>{
+listBtn.addEventListener('click', () => {
   listOfBooksOnScreen.classList.remove('display-none');
   addNewBookForm.classList.add('display-none');
-  contact.classList.add('display-none')
-})
+  contact.classList.add('display-none');
+});
 
-addNewBtn.addEventListener('click', () =>{
+addNewBtn.addEventListener('click', () => {
   listOfBooksOnScreen.classList.add('display-none');
   addNewBookForm.classList.remove('display-none');
-  contact.classList.add('display-none')
-})
+  contact.classList.add('display-none');
+});
 
-contactBtn.addEventListener('click', () =>{
+contactBtn.addEventListener('click', () => {
   listOfBooksOnScreen.classList.add('display-none');
   addNewBookForm.classList.add('display-none');
-  contact.classList.remove('display-none')
-})
+  contact.classList.remove('display-none');
+});
