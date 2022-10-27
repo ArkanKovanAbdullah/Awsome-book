@@ -1,4 +1,7 @@
-const booksContainer = document.getElementById('books-list');
+const listContainer = document.getElementById('list');
+let booksContainer = document.createElement('ul');
+booksContainer.classList.add('books-list');
+
 
 class Collect {
   constructor() {
@@ -6,7 +9,7 @@ class Collect {
   }
 
   removeBook(index) {
-    this.books.splice(index, 1);
+    this.books.splice(index);
     window.localStorage.setItem('books', JSON.stringify(this.books));
   }
 
@@ -14,18 +17,17 @@ class Collect {
     booksContainer.innerHTML = '';
     for (let i = 0; i < this.books.length; i += 1) {
       const book = document.createElement('li');
-      book.innerHTML = `<span class="title">'${this.books[i].title}' by ${this.books[i].author}</span>`;
+      book.innerHTML = `<span class="title"> "${this.books[i].title}" by ${this.books[i].author}</span>`;
       const btn = document.createElement('button');
       btn.className = 'list-btn';
-      const hrLine = document.createElement('hr');
       btn.textContent = 'Remove';
       book.append(btn);
-      booksContainer.append(hrLine);
       btn.onclick = () => {
         this.removeBook(i);
         this.displayBooks();
       };
       booksContainer.append(book);
+      listContainer.append(booksContainer);
     }
   }
 
