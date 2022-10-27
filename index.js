@@ -8,7 +8,7 @@ class Collect {
   }
 
   removeBook(index) {
-    this.books.splice(index);
+    this.books.splice(index, 1);
     window.localStorage.setItem('books', JSON.stringify(this.books));
   }
 
