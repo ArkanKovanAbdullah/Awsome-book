@@ -8,17 +8,36 @@
   <title>Awesome Book</title>
 </head>
 <body>
+  <div class="make-flex space-between borer-five-black align-center pdd-five margin-ten">
+    <h2>Awesome Book</h2>
+    <ul class="make-flex gap-ten list-none">
+      <li id="list-btn">list</li>
+      <li class="vertical-line"></li>
+      <li id="add-new-btn">Add new</li>
+      <li class="vertical-line"></li>
+      <li id="contact-btn">Contact</li>
+    </ul>
+  </div>
  <h1 class="text-center">Awesome Book</h1>
-    <section id="list">
+    <section class="list display-none" id="list">
     </section>
     <section id="form-section">
       <h5 class="text-center">Add a new book</h5>
-      <form class="margin-right-left-auto">
+      <form class="margin-right-left-auto books-form">
         <input class="inputs" name="title" type="text" placeholder="Tile" />
         <input class="inputs" name="author" type="text" placeholder="Author" />
         <button class="inputs" type="submit">Add</button>
       </form>
     </section>
+    <section class="width-thirty-percent center-margin-auto contact-section display-none" id="contact">
+      <h2 class="text-center">Contact Information</h2>
+      <p class="text-justify">Do you have any questions or you just want to say "Hello" <br> You can reach out to us.</p>
+      <ul class="hello">
+       <li>Our e-mail: mail@mail.com</li>
+       <li>Our phone number:0043586534422</li>
+       <li>Our address: 22,84503 City, Country</li>
+      </ul>
+     </section>
     <script src="index.js"></script>
 </body>
 </html>

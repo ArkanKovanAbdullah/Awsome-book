@@ -12,12 +12,71 @@
   flex-direction: column;
 }
 
+.make-flex {
+  display: flex;
+}
+
+.list-none {
+  list-style-type: none;
+}
+
+.vertical-line {
+  width: 3px;
+  background-color: black;
+  border-radius: 50px;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.pdd-five {
+  padding: 10px;
+}
+
+.margin-ten {
+  margin: 10px;
+}
+
+.gap-ten {
+  gap: 10px;
+}
+
 .margin-right-left-auto {
   margin: auto;
 }
 
 .text-center {
   text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.center-margin-auto {
+  margin: 0 auto;
+}
+
+.width-thirty-percent {
+  width: 40%;
+}
+
+.hello {
+  padding-left: 45px;
+  padding-top: 15px;
+}
+
+.borer-five-black {
+  border: 3px solid black;
 }
 
 .inputs {
@@ -27,13 +86,25 @@
   border: 2px solid black;
 }
 
-form {
+.books-form {
   display: flex;
   gap: 10px;
   flex-direction: column;
   width: 50%;
   align-items: center;
   justify-content: center;
+}
+
+.column-flex {
+  flex-direction: column;
+}
+
+.display-none {
+  display: none;
+}
+
+.display {
+  display: none;
 }
 
 .list-btn {
@@ -43,7 +114,7 @@ form {
   box-shadow: 2px 2px 2px;
 }
 
-li {
+.book-list {
   padding: 5px 5px;
   margin: auto;
   display: flex;
@@ -53,10 +124,10 @@ li {
   justify-content: space-between;
 }
 
-li:nth-child(odd) {
+.book-list:nth-child(odd) {
   background-color: #ddd;
 }
 
-li:nth-child(even) {
+.book-list:nth-child(even) {
   background-color: white;
 }
