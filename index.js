@@ -84,3 +84,16 @@ contactBtn.addEventListener('click', () => {
   addNewBookForm.classList.add('display-none');
   contact.classList.remove('display-none');
 });
+
+dateNow = document.getElementById('todays-date');
+
+let today = new Date();
+    
+let month = today.getMonth() + 1;
+let year = today.getFullYear();
+let date = today.getDate();
+let hours = today.getHours();
+let minutes = today.getMinutes();
+let seconds = today.getSeconds();
+
+dateNow.innerHTML = `${month}/${date}/${year}, ${hours}:${minutes}:${seconds}`;

@@ -114,6 +114,16 @@
   box-shadow: 2px 2px 2px;
 }
 
+.flex-end {
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+
+.margin-left-auto {
+  margin-left: auto;
+  width: auto;
+}
+
 .book-list {
   padding: 5px 5px;
   margin: auto;
