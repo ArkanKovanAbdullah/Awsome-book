@@ -86,7 +86,7 @@ contactBtn.addEventListener('click', () => {
 });
 
 const dateNow = document.getElementById('todays-date');
-const today = new Date();   
+const today = new Date();
 const month = today.getMonth() + 1;
 const year = today.getFullYear();
 const date = today.getDate();
