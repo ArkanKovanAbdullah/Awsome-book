@@ -6,7 +6,7 @@
 
 .books-list {
   margin: auto;
-  width: 40%;
+  width: 50%;
   border: 3px solid black;
   display: flex;
   flex-direction: column;

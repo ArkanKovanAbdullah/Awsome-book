@@ -4,12 +4,12 @@ booksContainer.classList.add('books-list');
 
 class Collect {
   constructor() {
-    this.books = [];
+    this.books = JSON.parse(localStorage.getItem('storedBooks')) || []; 
   }
 
   removeBook(index) {
     this.books.splice(index, 1);
-    window.localStorage.setItem('books', JSON.stringify(this.books));
+    window.localStorage.setItem('storedBooks', JSON.stringify(this.books));
   }
 
   displayBooks() {
@@ -36,7 +36,8 @@ class Collect {
   }
 }
 
-const books = new Collect();
+const bookie = new Collect();
+bookie.displayBooks();
 
 document.forms[0].onsubmit = (event) => {
   event.preventDefault();
@@ -51,9 +52,10 @@ document.forms[0].onsubmit = (event) => {
     section.insertAdjacentElement('afterend', message);
     setTimeout(() => { message.remove(); }, 3000);
   } else {
-    books.addBook(title, author);
+    bookie.addBook(title, author);
     thisForm[0].value = '';
     thisForm[1].value = '';
   }
-  window.localStorage.setItem('books', JSON.stringify(books));
+  window.localStorage.setItem('storedBooks', JSON.stringify(bookie.books));
 };
+
