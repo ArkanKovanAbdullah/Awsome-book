@@ -87,7 +87,6 @@
 }
 
 .books-form {
-  display: flex;
   gap: 10px;
   flex-direction: column;
   width: 50%;
