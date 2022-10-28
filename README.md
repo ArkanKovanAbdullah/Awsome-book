@@ -35,6 +35,20 @@
 
 To get a local copy up and running follow these simple example steps.
 
+## How should it be tested
+
+Clone the repository
+```
+git clone https://github.com/ArkanKovanAbdullah/Awsome-book.git
+```
+Navigate to the folder
+```
+cd Awsome-book
+```
+Checkout the branch
+```
+git checkout finanl-styling
+```
 
 ## Authors
 
