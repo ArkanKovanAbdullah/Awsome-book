@@ -16,7 +16,8 @@ class Collect {
     booksContainer.innerHTML = '';
     for (let i = 0; i < this.books.length; i += 1) {
       const book = document.createElement('li');
-      book.className = 'book-list';
+      book.className = 'make-flex';
+      book.classList.add('book-list');
       book.innerHTML = `<span class="title"> "${this.books[i].title}" by ${this.books[i].author}</span>`;
       const btn = document.createElement('button');
       btn.className = 'list-btn';
