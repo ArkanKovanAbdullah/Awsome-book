@@ -126,7 +126,6 @@
 .book-list {
   padding: 5px 5px;
   margin: auto;
-  display: flex;
   flex-direction: row;
   width: 100%;
   align-items: center;
