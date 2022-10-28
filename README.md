@@ -47,7 +47,7 @@ cd Awsome-book
 ```
 Checkout the branch
 ```
-git checkout finanl-styling
+git checkout main
 ```
 
 ## Authors
